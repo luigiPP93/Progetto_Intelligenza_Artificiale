@@ -4,7 +4,6 @@ import { Runner } from '../game';
 import GeneticModel from '../ai/models/genetic/GeneticModel';
 import RandomModel from '../ai/models/random/RandomModel';
 
-//  contiamo 10 Dinosauri = 10;
 let runner = null;
 
 const rankList = [];
