@@ -81,9 +81,8 @@ export default class DistanceMeter {
    * @param {number} canvasWidth
    */
   calcXPos(canvasWidth) {
-    this.x =
-      canvasWidth -
-      DistanceMeter.dimensions.DEST_WIDTH * (this.maxScoreUnits + 1);
+    this.x =canvasWidth -DistanceMeter.dimensions.DEST_WIDTH * (this.maxScoreUnits + 1);
+    console.info("this.x :" + this.x);
   }
 
   /**
@@ -152,15 +151,15 @@ export default class DistanceMeter {
     if (!this.acheivement) {
       distance = this.getActualDistance(distance);
       // Score has gone beyond the initial digit count.
-      if (
-        distance > this.maxScore &&
-        this.maxScoreUnits === this.config.MAX_DISTANCE_UNITS
-      ) {
+      if (distance > this.maxScore &&this.maxScoreUnits === this.config.MAX_DISTANCE_UNITS ) {
         this.maxScoreUnits += 1;
         this.maxScore = parseInt(`${this.maxScore}9`, 1);
+        console.info("maxScoreUnits"+this.maxScoreUnits);
+        console.info("distance"+this.distance);
       } else {
         this.distance = 0;
       }
+     
 
       if (distance > 0) {
         // Acheivement unlocked
@@ -209,6 +208,7 @@ export default class DistanceMeter {
     this.canvasCtx.globalAlpha = 0.8;
     for (let i = this.highScore.length - 1; i >= 0; i -= 1) {
       this.draw(i, parseInt(this.highScore[i], 10), true);
+      //console.log(this.highScore[i]);
     }
     this.canvasCtx.restore();
   }
@@ -220,11 +220,12 @@ export default class DistanceMeter {
    */
   setHighScore(distance) {
     distance = this.getActualDistance(distance);
-    const highScoreStr = (this.defaultString + distance).substr(
-      -this.maxScoreUnits
-    );
+    const highScoreStr = (this.defaultString + distance).substr(-this.maxScoreUnits);
 
     this.highScore = ['10', '11', ''].concat(highScoreStr.split(''));
+    console.info("highScore :" + this.highScore);
+    
+   
   }
 
   /**
