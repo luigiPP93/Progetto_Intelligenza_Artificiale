@@ -9,6 +9,6 @@ Nello sviluppo dell' algoritmo genetico abbiamo usato node.Js
 Per scrivere la documentazione overleaf.
 
 # Partecipanti
-Emanuele Riccardi
+Emanuele Riccardi \\
 Luigi Emanuele Sica
 
