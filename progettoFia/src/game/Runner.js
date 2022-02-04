@@ -295,7 +295,8 @@ export default class Runner {
 
       if (!gameOver) {
         this.distanceRan += this.currentSpeed * deltaTime / this.msPerFrame;
-
+       
+     
         if (this.currentSpeed < this.config.MAX_SPEED) {
           this.currentSpeed += this.config.ACCELERATION;
         }
@@ -320,6 +321,7 @@ export default class Runner {
     const lives = this.tRexGroup.lives();
     if (lives > 0) {
       this.generationEl.innerText = `GENERAZIONE N:${Runner.generation} - IN VITA x ${this.tRexGroup.lives()}`;
+      //console.info("distanceRan :" + this.distanceRan);
     } else {
       this.generationEl.innerHTML = `<div style="color: red;">GENERAZIONE N:${Runner.generation}  - HAI PERSO</div>`;
     }
@@ -408,8 +410,7 @@ export default class Runner {
     this.distanceMeter.acheivement = false;
 
     this.tRexGroup.update(100, Trex.status.CRASHED);
-
-    // Update the high score.
+   
     if (this.distanceRan > this.highestScore) {
       this.highestScore = Math.ceil(this.distanceRan);
       this.distanceMeter.setHighScore(this.highestScore);

@@ -7,7 +7,7 @@ export default class RandomModel extends Model {
   init() {
     this.randomize();
   }
-  //  insieme dei velori è un array e contine i valori di velocità, larghezza e distanza e      
+  //  insieme dei velori è un array e contine i valori di velocità, larghezza e distanza e bias     
 predizione(insiemeValori) {
     const inputX = insiemeValori[0];
     const y =
