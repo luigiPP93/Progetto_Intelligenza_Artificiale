@@ -25,8 +25,8 @@ export default class GeneticModel extends Model {
     // seleziono un punto radomico da dove poi scambio i vari valori
     const crossOverPoint = Math.floor(Math.random() * figli1.length);
     console.info("crosshover: ",crossOverPoint);
-    // Scambio tutti i valori degli individui precedenti al punto di crossOver scelto a caso al rigo 26 
-    for (let i = 0; i < crossOverPoint; i += 1) {
+    // Scambio tutti i valori degli individui successivi al punto di crossOver scelto a caso al rigo 26 
+    for (let i = crossOverPoint; i < figli1.length; i += 1) {
         const temp = figli1[i];
         figli1[i] = figli2[i];
         figli2[i] = temp;
