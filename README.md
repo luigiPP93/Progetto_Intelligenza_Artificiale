@@ -21,6 +21,14 @@ L'approccio principale utilizzato per l'addestramento dell'intelligenza artifici
 - Sviluppo dell'algoritmo genetico con Node.js.
 - Documentazione scritta con Overleaf.
 
+### Relazione e PowerPoint
+
+Per ulteriori informazioni sul progetto, sono disponibili:
+
+- **Relazione**: Una documentazione dettagliata delle fasi di sviluppo e dei risultati ottenuti.
+- **PowerPoint**: Una presentazione visiva dei principali punti trattati nel progetto.
+
+
 ## Partecipanti
 
 - Emanuele Riccardi
